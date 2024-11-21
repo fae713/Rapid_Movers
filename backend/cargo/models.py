@@ -51,7 +51,7 @@ class User(AbstractUser):
 
 
 
-# User Profile (Optional: extend User model)
+# User Profile
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="profile")
     secondary_contact = models.CharField(max_length=15, blank=True, null=True)
@@ -163,4 +163,4 @@ class Notification(models.Model):
         return f"Notification for {self.user.email} - {self.message[:20]}"
 
     class Meta:
-        ordering = ['-created_timestamp']  # Corrected to use created_timestamp
+        ordering = ['-created_timestamp']
