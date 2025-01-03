@@ -10,9 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
+import os
 from decouple import Config, RepositoryEnv
 from pathlib import Path
-import os
+from dotenv import load_dotenv
 import logging
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -101,6 +102,26 @@ REST_FRAMEWORK = {
     ],
 }
 
+
+# Social Provider Configuration
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'APP': {
+            'client_id': os.getenv('GOOGLE_CLIENT_ID'),
+            'secret': os.getenv('GOOGLE_CLIENT_SECRET'),
+        },
+        'SCOPE': ['profile', 'email'],
+        'AUTH_PARAMS': {'access_type': 'online'}
+    },
+    'facebook': {
+        'APP': {
+            'client_id': os.getenv('FACEBOOK_APP_ID'),
+            'secret': os.getenv('FACEBOOK_APP_SECRET'),
+        },
+        'METHOD': 'oauth2',
+        'SCOPE': ['email', 'public_profile'],
+    }
+}
 
 #CORS_ORIGIN_ALLOW_ALL = True
 # ADDED THIS
