@@ -69,14 +69,59 @@ const Home = () => {
 
         <div>
           <div className='flex items-start mb-8 md:mb-10 lg:mb-16'>
-            <div className='text-3xl md:text-4xl text-blue-600 mr-10 md:mr-16'><LuPackageCheck /></div>
+            <div className='items-center'>
+              <div className='text-3xl md:text-4xl text-blue-600 mr-10 md:mr-16'><LuPackageCheck /></div>
+              <div className='text-xl md:text-2xl text-blue-600 mr-10 md:mr-16 mt-3 md:mt-5'><LuPackageCheck /></div>
+              <div className='text-xl md:text-2xl text-blue-600 mr-10 md:mr-16 mt-3 md:mt-5'><LuPackageCheck /></div>
+            </div>
             <div>
               <h5 className='text-2xl md:text-3xl font-medium'>Safe Packing</h5>
-              <p className='mt-3 md:mt-5 text-sm md:text-base'>We package your items with a special wrapper that makes it safe for transport</p>
+              {/* <p className='mt-3 md:mt-5 text-sm md:text-base'>We package your items with a special wrapper that makes it safe for transport</p> */}
+              <p className='mt-3 md:mt-5 text-sm md:text-base'>Tracking goods</p>
+              <p className='mt-3 md:mt-5 text-sm md:text-base'>Tracking goods</p>
+            </div>
+          </div>
+          <div className='flex items-start mb-8 md:mb-10 lg:mb-16'>
+            <div className='items-center'>
+              <div className='text-3xl md:text-4xl text-blue-600 mr-10 md:mr-16'><LuPackageCheck /></div>
+              <div className='text-xl md:text-2xl text-blue-600 mr-10 md:mr-16 mt-3 md:mt-5'><LuPackageCheck /></div>
+              <div className='text-xl md:text-2xl text-blue-600 mr-10 md:mr-16 mt-3 md:mt-5'><LuPackageCheck /></div>
+            </div>
+            <div>
+              <h5 className='text-2xl md:text-3xl font-medium'>Safe Packing</h5>
+              {/* <p className='mt-3 md:mt-5 text-sm md:text-base'>We package your items with a special wrapper that makes it safe for transport</p> */}
+              <p className='mt-3 md:mt-5 text-sm md:text-base'>Tracking goods</p>
+              <p className='mt-3 md:mt-5 text-sm md:text-base'>Tracking goods</p>
+            </div>
+          </div>
+          <div className='flex items-start mb-8 md:mb-10 lg:mb-16'>
+            <div className='items-center'>
+              <div className='text-3xl md:text-4xl text-blue-600 mr-10 md:mr-16'><LuPackageCheck /></div>
+              <div className='text-xl md:text-2xl text-blue-600 mr-10 md:mr-16 mt-3 md:mt-5'><LuPackageCheck /></div>
+              <div className='text-xl md:text-2xl text-blue-600 mr-10 md:mr-16 mt-3 md:mt-5'><LuPackageCheck /></div>
+            </div>
+            <div>
+              <h5 className='text-2xl md:text-3xl font-medium'>Safe Packing</h5>
+              {/* <p className='mt-3 md:mt-5 text-sm md:text-base'>We package your items with a special wrapper that makes it safe for transport</p> */}
+              <p className='mt-3 md:mt-5 text-sm md:text-base'>Tracking goods</p>
+              <p className='mt-3 md:mt-5 text-sm md:text-base'>Tracking goods</p>
+            </div>
+          </div>
+          <div className='flex items-start mb-8 md:mb-10 lg:mb-16'>
+            <div className='items-center'>
+              <div className='text-3xl md:text-4xl text-blue-600 mr-10 md:mr-16'><LuPackageCheck /></div>
+              <div className='text-xl md:text-2xl text-blue-600 mr-10 md:mr-16 mt-3 md:mt-5'><LuPackageCheck /></div>
+              <div className='text-xl md:text-2xl text-blue-600 mr-10 md:mr-16 mt-3 md:mt-5'><LuPackageCheck /></div>
+            </div>
+            <div>
+              <h5 className='text-2xl md:text-3xl font-medium'>Safe Packing</h5>
+              {/* <p className='mt-3 md:mt-5 text-sm md:text-base'>We package your items with a special wrapper that makes it safe for transport</p> */}
+              <p className='mt-3 md:mt-5 text-sm md:text-base'>Tracking goods</p>
+              <p className='mt-3 md:mt-5 text-sm md:text-base'>Tracking goods</p>
             </div>
           </div>
 
-          <div className='flex items-start mb-8 md:mb-10 lg:mb-16'>
+          {/* <div className='flex items-start mb-8 md:mb-10 lg:mb-16'>
             <div className='text-3xl md:text-4xl text-blue-600 mr-10 md:mr-16'><GrMapLocation /></div>
             <div>
               <h5 className='text-2xl md:text-3xl font-medium'>Move Anywhere</h5>
@@ -90,7 +135,7 @@ const Home = () => {
               <h5 className='text-2xl md:text-3xl font-medium'>Fast Drop-off</h5>
               <p className='mt-3 md:mt-5 text-sm md:text-base'>We package your items with a special wrapper that makes it safe for transport</p>
             </div>
-          </div>
+          </div> */}
 
         </div>
       </div>
