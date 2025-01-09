@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
 import truckImage from '../assets/images/truckImage.jpg'
 import truckImage2 from '../assets/images/truckImage2.png'
-import bgImage from '../assets/images/heroImageBG.png'
-import WeMove from '../assets/images/WeMove.png'
-import WeMove2 from '../assets/images/WeMove2.png'
 import { FaCircleArrowLeft, FaCircleArrowRight } from "react-icons/fa6";
 import { LuPackageCheck } from "react-icons/lu";
-import { MdOutlineLocalShipping } from "react-icons/md";
-import { GrMapLocation } from "react-icons/gr";
 import { Link } from 'react-router-dom'
+import home from "../assets/icons/home.png"
+import office from "../assets/icons/office.png"
+import tools from "../assets/icons/tools.png"
+import event from "../assets/icons/event.png"
 
 const Testimonials = [
   { name: "David Michael", words: "Great service, highly recommend!" },
@@ -137,6 +136,52 @@ const Home = () => {
             </div>
           </div> */}
 
+        </div>
+      </div>
+
+      <div className='px-5 md:px-10 lg:px-20 py-20 w-auto'>
+        <h5 className='text-3xl font-semibold text-center'>Our Services</h5>
+        
+        <div className='grid grid-cols-4 gap-6 md:gap-8 lg:gap-12 mt-16'>
+          
+          <Link to="/services">
+            <div className=''>
+              <div className='h-20 md:h-28 lg:h-40 w-20 md:w-28 lg:w-40 mx-auto'>
+                <img className='w-full h-full' src={home} alt="home" />
+              </div>
+              <p className='my-5 text-sm md:text-xl lg:text-2xl text-center font-medium'>Home transfer</p>
+            </div>
+          </Link>
+
+          <Link to="/services">
+            <div className=''>
+              <div className='h-20 md:h-28 lg:h-40 w-20 md:w-28 lg:w-40 mx-auto'>
+                <img className='w-full h-full' src={office} alt="home" />
+              </div>
+              <p className='my-5 text-sm md:text-xl lg:text-2xl text-center font-medium'>Home transfer</p>
+            </div>
+          </Link>
+
+          <Link to="/services">
+            <div className=''>
+              <div className='h-20 md:h-28 lg:h-40 w-20 md:w-28 lg:w-40 mx-auto'>
+                <img className='w-full h-full' src={event} alt="home" />
+              </div>
+              <p className='my-5 text-sm md:text-xl lg:text-2xl text-center font-medium'>Home transfer</p>
+            </div>
+          </Link>
+
+          <Link to="/services">
+            <div className=''>
+              <div className='h-20 md:h-28 lg:h-40 w-20 md:w-28 lg:w-40 mx-auto'>
+                <img className='w-full h-full' src={tools} alt="home" />
+              </div>
+              <p className='my-5 text-sm md:text-xl lg:text-2xl text-center font-medium'>Home transfer</p>
+            </div>
+          </Link>
+
+          
+          
         </div>
       </div>
 
