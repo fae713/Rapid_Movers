@@ -1,13 +1,8 @@
-import React, { useState } from 'react'
-import truckImage from '../assets/images/truckImage.jpg'
-import truckImage2 from '../assets/images/truckImage2.png'
-import { FaCircleArrowLeft, FaCircleArrowRight } from "react-icons/fa6";
-import { LuPackageCheck } from "react-icons/lu";
-import { Link } from 'react-router-dom'
-import home from "../assets/icons/home.png"
-import office from "../assets/icons/office.png"
-import tools from "../assets/icons/tools.png"
-import event from "../assets/icons/event.png"
+import React, { useState } from 'react';
+import truckImage from '../assets/images/truckImage.jpg';
+import { FaArrowLeft, FaArrowRight, FaTruck, FaHandshake, FaRegClock, FaMapMarkedAlt } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+import { FaHome, FaBuilding, FaSuitcase, FaGlobe } from "react-icons/fa"; // Imported icons for services
 
 const Testimonials = [
   { name: "David Michael", words: "Great service, highly recommend!" },
@@ -18,20 +13,14 @@ const Testimonials = [
   { name: "Tom Johnson", words: "They handled everything perfectly!" },
 ];
 
-
 const TestCards = ({ test }) => {
- 
   return (
-
-    
-      <div className='bg-white w-full h-[220px] px-10 py-10 text-center'>
-        <p className='text-xl font-semibold'>{test.name}</p>
-        <p className='text-sm font-normal mt-3'>{test.words}</p>
-      </div>
-
-
-)};
-
+    <div className='bg-white w-full h-[220px] px-10 py-10 text-center'>
+      <p className='text-xl font-semibold'>{test.name}</p>
+      <p className='text-sm font-normal mt-3'>{test.words}</p>
+    </div>
+  );
+};
 
 const Home = () => {
 
@@ -42,211 +31,158 @@ const Home = () => {
 
   return (
     <div className='pt-14'>
-      
-      <div className='grid grid-cols-1 md:grid-cols-2  w-full justify-between mt-14'>
+      <div className='grid grid-cols-1 md:grid-cols-2 w-full justify-between mt-14'>
         <div className='px-5 md:px-10 lg:px-20 py-24 md:py-24 lg:py-32'>
-          <h1 className='text-xl md:text-2xl lg:text-3xl font-semibold uppercase'>Fast, Reliable, and Stress-Free Moving Services.<br />
-          <span className='text-blue-600'>Rapid Mover</span> is here to assist you.</h1>
+          <h1 className='text-xl md:text-2xl lg:text-3xl font-semibold uppercase'>
+            Fast, Reliable, and Stress-Free Moving Services.<br />
+            <span className='text-blue-600'>Rapid Mover</span> is here to assist you.
+          </h1>
           <Link to="/quotes">
-            <button className='mt-6 py-3 px-10 bg-blue-700 rounded-sm text-sm font-semibold text-white'>Get Quote</button>
-          </Link> 
+            <button className='mt-6 py-3 px-10 bg-blue-600 rounded-sm text-sm font-semibold text-white hover:bg-blue-800'>Get Quote</button>
+          </Link>
         </div>
-
         <div className='col-span-1 md:col-span-1 w-full h-[560px]'>
           <img className='w-full h-full' src={truckImage} alt="truck" />
         </div>
       </div>
 
-
       <div className='bg-gray-100 py-16 md:py-20 lg:py-40 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 lg:gap-28 px-5 md:px-10 lg:px-20'>
         <div>
           <h5 className='text-blue-600 font-semibold text-base md:text-lg mb-1 md:mb-5'>WHY RAPID MOVERS</h5>
-          <h2 className='text-3xl md:text-3xl lg:text-5xl font-bold my-2 md:my-5 leading-[40px] md:leading-[52px] lg:leading-[64px]'>Here are advantages of working with Rapid Movers</h2>
-          <p className='text-base my-5'>We take great pride in offering the best moving services available anywhere in Nigeria. We work with the best driver and movers that assists you to package, load, and move your items to your desired location.</p>
-          {/* <button className='mt-6 py-3 px-10 bg-[#1D9BF0] rounded-sm text-sm font-semibold text-white'>Get Quote</button> */}
+          <h2 className='text-3xl md:text-3xl lg:text-5xl font-bold my-2 md:my-5 leading-[40px] md:leading-[52px] lg:leading-[64px]'>
+            Here are advantages of working with Rapid Movers
+          </h2>
+          <p className='text-base my-5'>
+            We take great pride in offering the best moving services available anywhere in Nigeria. We work with the best drivers and movers to assist you in packaging, loading, and moving your items to your desired location.
+          </p>
         </div>
 
         <div>
           <div className='flex items-start mb-8 md:mb-10 lg:mb-16'>
-            <div className='items-center'>
-              <div className='text-3xl md:text-4xl text-blue-600 mr-10 md:mr-16'><LuPackageCheck /></div>
-              <div className='text-xl md:text-2xl text-blue-600 mr-10 md:mr-16 mt-3 md:mt-5'><LuPackageCheck /></div>
-              <div className='text-xl md:text-2xl text-blue-600 mr-10 md:mr-16 mt-3 md:mt-5'><LuPackageCheck /></div>
-            </div>
+            <div className='text-3xl md:text-4xl text-blue-600 mr-10 md:mr-16'><FaTruck /></div>
             <div>
-              <h5 className='text-2xl md:text-3xl font-medium'>Safe Packing</h5>
-              {/* <p className='mt-3 md:mt-5 text-sm md:text-base'>We package your items with a special wrapper that makes it safe for transport</p> */}
-              <p className='mt-3 md:mt-5 text-sm md:text-base'>Tracking goods</p>
-              <p className='mt-3 md:mt-5 text-sm md:text-base'>Tracking goods</p>
+              <h5 className='text-2xl md:text-3xl font-medium'>Real-Time Tracking & Updates</h5>
+              <p className='mt-3 md:mt-5 text-sm md:text-base'>GPS Tracking: Monitor your shipments live on a map</p>
+              <p className='mt-3 md:mt-5 text-sm md:text-base'>Automated Notifications: Receive updates at key milestones</p>
             </div>
           </div>
           <div className='flex items-start mb-8 md:mb-10 lg:mb-16'>
-            <div className='items-center'>
-              <div className='text-3xl md:text-4xl text-blue-600 mr-10 md:mr-16'><LuPackageCheck /></div>
-              <div className='text-xl md:text-2xl text-blue-600 mr-10 md:mr-16 mt-3 md:mt-5'><LuPackageCheck /></div>
-              <div className='text-xl md:text-2xl text-blue-600 mr-10 md:mr-16 mt-3 md:mt-5'><LuPackageCheck /></div>
-            </div>
+            <div className='text-3xl md:text-4xl text-blue-600 mr-10 md:mr-16'><FaHandshake /></div>
             <div>
-              <h5 className='text-2xl md:text-3xl font-medium'>Safe Packing</h5>
-              {/* <p className='mt-3 md:mt-5 text-sm md:text-base'>We package your items with a special wrapper that makes it safe for transport</p> */}
-              <p className='mt-3 md:mt-5 text-sm md:text-base'>Tracking goods</p>
-              <p className='mt-3 md:mt-5 text-sm md:text-base'>Tracking goods</p>
+              <h5 className='text-2xl md:text-3xl font-medium'>Customizable Services</h5>
+              <p className='mt-3 md:mt-5 text-sm md:text-base'>Priority Delivery: Same-day or next-day options available</p>
+              <p className='mt-3 md:mt-5 text-sm md:text-base'>White Glove Service: Special handling for high-value goods</p>
             </div>
           </div>
           <div className='flex items-start mb-8 md:mb-10 lg:mb-16'>
-            <div className='items-center'>
-              <div className='text-3xl md:text-4xl text-blue-600 mr-10 md:mr-16'><LuPackageCheck /></div>
-              <div className='text-xl md:text-2xl text-blue-600 mr-10 md:mr-16 mt-3 md:mt-5'><LuPackageCheck /></div>
-              <div className='text-xl md:text-2xl text-blue-600 mr-10 md:mr-16 mt-3 md:mt-5'><LuPackageCheck /></div>
-            </div>
+            <div className='text-3xl md:text-4xl text-blue-600 mr-10 md:mr-16'><FaRegClock /></div>
             <div>
-              <h5 className='text-2xl md:text-3xl font-medium'>Safe Packing</h5>
-              {/* <p className='mt-3 md:mt-5 text-sm md:text-base'>We package your items with a special wrapper that makes it safe for transport</p> */}
-              <p className='mt-3 md:mt-5 text-sm md:text-base'>Tracking goods</p>
-              <p className='mt-3 md:mt-5 text-sm md:text-base'>Tracking goods</p>
+              <h5 className='text-2xl md:text-3xl font-medium'>Seamless Online Experience</h5>
+              <p className='mt-3 md:mt-5 text-sm md:text-base'>24/7 Support: Manage shipments and review invoices anytime</p>
+              <p className='mt-3 md:mt-5 text-sm md:text-base'>Live Scheduling: Request inspections or schedule video walkthroughs</p>
             </div>
           </div>
           <div className='flex items-start mb-8 md:mb-10 lg:mb-16'>
-            <div className='items-center'>
-              <div className='text-3xl md:text-4xl text-blue-600 mr-10 md:mr-16'><LuPackageCheck /></div>
-              <div className='text-xl md:text-2xl text-blue-600 mr-10 md:mr-16 mt-3 md:mt-5'><LuPackageCheck /></div>
-              <div className='text-xl md:text-2xl text-blue-600 mr-10 md:mr-16 mt-3 md:mt-5'><LuPackageCheck /></div>
-            </div>
+            <div className='text-3xl md:text-4xl text-blue-600 mr-10 md:mr-16'><FaMapMarkedAlt /></div>
             <div>
-              <h5 className='text-2xl md:text-3xl font-medium'>Safe Packing</h5>
-              {/* <p className='mt-3 md:mt-5 text-sm md:text-base'>We package your items with a special wrapper that makes it safe for transport</p> */}
-              <p className='mt-3 md:mt-5 text-sm md:text-base'>Tracking goods</p>
-              <p className='mt-3 md:mt-5 text-sm md:text-base'>Tracking goods</p>
+              <h5 className='text-2xl md:text-3xl font-medium'>Flexible Options</h5>
+              <p className='mt-3 md:mt-5 text-sm md:text-base'>Dynamic Pricing: Real-time cost estimates</p>
+              <p className='mt-3 md:mt-5 text-sm md:text-base'>Warehousing & Storage: Short-term storage solutions available</p>
             </div>
           </div>
-
-          {/* <div className='flex items-start mb-8 md:mb-10 lg:mb-16'>
-            <div className='text-3xl md:text-4xl text-blue-600 mr-10 md:mr-16'><GrMapLocation /></div>
-            <div>
-              <h5 className='text-2xl md:text-3xl font-medium'>Move Anywhere</h5>
-              <p className='mt-3 md:mt-5 text-sm md:text-base'>We package your items with a special wrapper that makes it safe for transport</p>
-            </div>
-          </div>
-
-          <div className='flex items-start mb-8 md:mb-10 lg:mb-16'>
-            <div className='text-3xl md:text-4xl text-blue-600 mr-10 md:mr-16'><MdOutlineLocalShipping /></div>
-            <div>
-              <h5 className='text-2xl md:text-3xl font-medium'>Fast Drop-off</h5>
-              <p className='mt-3 md:mt-5 text-sm md:text-base'>We package your items with a special wrapper that makes it safe for transport</p>
-            </div>
-          </div> */}
-
         </div>
       </div>
 
       <div className='px-5 md:px-10 lg:px-20 py-20 w-auto'>
         <h5 className='text-3xl font-semibold text-center'>Our Services</h5>
         
-        <div className='grid grid-cols-4 gap-6 md:gap-8 lg:gap-12 mt-16'>
-          
-          <Link to="/services">
-            <div className=''>
-              <div className='h-20 md:h-28 lg:h-40 w-20 md:w-28 lg:w-40 mx-auto'>
-                <img className='w-full h-full' src={home} alt="home" />
-              </div>
-              <p className='my-5 text-sm md:text-xl lg:text-2xl text-center font-medium'>Home transfer</p>
-            </div>
-          </Link>
-
-          <Link to="/services">
-            <div className=''>
-              <div className='h-20 md:h-28 lg:h-40 w-20 md:w-28 lg:w-40 mx-auto'>
-                <img className='w-full h-full' src={office} alt="home" />
-              </div>
-              <p className='my-5 text-sm md:text-xl lg:text-2xl text-center font-medium'>Home transfer</p>
-            </div>
-          </Link>
-
-          <Link to="/services">
-            <div className=''>
-              <div className='h-20 md:h-28 lg:h-40 w-20 md:w-28 lg:w-40 mx-auto'>
-                <img className='w-full h-full' src={event} alt="home" />
-              </div>
-              <p className='my-5 text-sm md:text-xl lg:text-2xl text-center font-medium'>Home transfer</p>
-            </div>
-          </Link>
-
-          <Link to="/services">
-            <div className=''>
-              <div className='h-20 md:h-28 lg:h-40 w-20 md:w-28 lg:w-40 mx-auto'>
-                <img className='w-full h-full' src={tools} alt="home" />
-              </div>
-              <p className='my-5 text-sm md:text-xl lg:text-2xl text-center font-medium'>Home transfer</p>
-            </div>
-          </Link>
-
-          
-          
-        </div>
+        <div className='grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 lg:gap-12 mt-16'>
+  <Link to="/services">
+    <div className='text-center'>
+      <div className='h-20 md:h-28 lg:h-40 w-20 md:w-28 lg:w-40 mx-auto'>
+        <FaHome className="w-full h-full" />
       </div>
-
-
-      <div className='text-white px-5 md:px-10 lg:px-20 py-10 md:py-28 bg-[#394856] grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-40 lg:gap-60 ' >
-        <div>
-          <img className='w-full h-full object-fill' src={truckImage2} alt="truck" />
-        </div>
-        <div>
-          <h5 className='font-semibold text-base md:text-lg mb-1 md:mb-5 text-blue-600'>HOW IT WORKS</h5>
-          <h2 className='text-4xl md:text-4xl lg:text-5xl font-bold leading-[40px] md:leading-[52px] lg:leading-[64px] mb-5 md:mb-8 lg:mb-10'>Simple steps to move</h2>
-          
-          <div className='flex items-start my-8'>
-            <h4 className='text-3xl text-blue-600 font-medium mb-3 mr-5'>01</h4>
-            <div>
-              <h4 className='text-3xl font-medium mb-3'>Get an estimate to plan</h4>
-              <p className='text-base font-normal'>Following the get a quote process will get you started and give you an estimate on details about the move that you can plan with.</p>
-            </div>
-          </div>
-
-          <div className='flex items-start my-8'>
-            <h4 className='text-3xl text-blue-600 font-medium mb-3 mr-5'>02</h4>
-            <div>
-              <h4 className='text-3xl font-medium mb-3'>Get an estimate to plan</h4>
-              <p className='text-base font-normal'>Following the get a quote process will get you started and give you an estimate on details about the move that you can plan with.</p>
-            </div>
-          </div>
-
-          <div className='flex items-start my-8'>
-            <h4 className='text-3xl text-blue-600 font-medium mb-3 mr-5'>03</h4>
-            <div>
-              <h4 className='text-3xl font-medium mb-3'>Get an estimate to plan</h4>
-              <p className='text-base font-normal'>Following the get a quote process will get you started and give you an estimate on details about the move that you can plan with.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-
-      
-      <div className='px-5 md:px-10 lg:px-20 py-20 bg-gray-100'>
-        <h2 className='text-lg md:text-xl lg:text-2xl font-semibold text-center'>Our Previous customers</h2>
-        <div className='grid grid-cols-6 md:grid-cols-5 items-center mt-8 md:mt-10 lg:mt-14'>
-          <div><FaCircleArrowLeft className='mx-auto text-3xl' /></div>
-          <div className='col-span-4 md:col-span-3 grid grid-cols-2 gap-3 md:gap-4 lg:gap-6'>
-            {shownTestimonials.map((test, index)=> (
-              <TestCards key={index} test={test}/>
-            ))}
-          </div>
-          <div><FaCircleArrowRight className='mx-auto text-3xl' /></div>
-        </div>
-      </div>
-
-      <div className='py-20 px-5 md:px-10 lg:px-32 bg-[#394856] mx-auto text-center'>
-        <h5 className='text-6xl font-bold text-white my-10'>Ready to Move Your Items?</h5>
-        <div>
-          <button className='mt-6 mx-3 py-3 px-10 bg-[#1D9BF0] rounded-sm text-sm font-semibold text-white'>Get Quote</button>
-          <button className='mt-6 mx-3 py-3 px-10 rounded-sm text-sm font-semibold text-white underline'>Get Quote</button>
-        </div>
-      </div>
-
-
+      <p className='my-5 text-sm md:text-xl lg:text-2xl text-center font-medium'>Residential Move</p>
     </div>
-  )
+  </Link>
+
+  <Link to="/services">
+    <div className='text-center'>
+      <div className='h-20 md:h-28 lg:h-40 w-20 md:w-28 lg:w-40 mx-auto'>
+        <FaBuilding className="w-full h-full" />
+      </div>
+      <p className='my-5 text-sm md:text-xl lg:text-2xl text-center font-medium'>Commercial Move</p>
+    </div>
+  </Link>
+
+  <Link to="/services">
+    <div className='text-center'>
+      <div className='h-20 md:h-28 lg:h-40 w-20 md:w-28 lg:w-40 mx-auto'>
+        <FaGlobe className="w-full h-full" />
+      </div>
+      <p className='my-5 text-sm md:text-xl lg:text-2xl text-center font-medium'>Inter-State Move</p>
+    </div>
+  </Link>
+
+  <Link to="/services">
+    <div className='text-center'>
+      <div className='h-20 md:h-28 lg:h-40 w-20 md:w-28 lg:w-40 mx-auto'>
+        <FaSuitcase className="w-full h-full" />
+      </div>
+      <p className='my-5 text-sm md:text-xl lg:text-2xl text-center font-medium'>Office Move</p>
+    </div>
+  </Link>
+</div>
+      </div>
+
+      <div className='text-white px-5 md:px-10 lg:px-20 py-10 md:py-28 bg-[#394856] grid grid-cols-1 md:grid-cols-2 gap-8'>
+        <div className='flex justify-center'>
+          <button className='py-3 px-8 md:px-12 bg-blue-600 hover:bg-blue-800 text-sm md:text-base text-white font-medium rounded-lg'>
+            Get a Quote
+          </button>
+        </div>
+
+        <div className='text-center md:text-left'>
+          <p className='font-semibold text-lg md:text-xl'>
+            Trust Rapid Movers to provide top-quality moving services. Whether you're moving locally or interstate, we've got you covered.
+          </p>
+        </div>
+      </div>
+
+      <div className="flex justify-center items-center mt-14 md:mt-16 px-4 md:px-8">
+  {/* Left Button */}
+  <button 
+    onClick={() => {
+      const newIndex = firstIndex === 0 ? Testimonials.length - 2 : firstIndex - 2;
+      setFirstIndex(newIndex);
+      setLastIndex(newIndex + 2);
+    }}
+    className="bg-transparent text-blue-600 text-3xl p-2 rounded-full hover:bg-gray-100 transition-all ease-in-out mx-4"
+  >
+    <FaArrowLeft />
+  </button>
+
+  {/* Testimonials Grid */}
+  <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-10">
+    {shownTestimonials.map((test) => (
+      <TestCards key={test.name} test={test} />
+    ))}
+  </div>
+
+  {/* Right Button */}
+  <button 
+    onClick={() => {
+      const newIndex = firstIndex + 2 >= Testimonials.length ? 0 : firstIndex + 2;
+      setFirstIndex(newIndex);
+      setLastIndex(newIndex + 2);
+    }} 
+    className="bg-transparent text-blue-600 text-3xl p-2 rounded-full hover:bg-gray-100 transition-all ease-in-out mx-4"
+  >
+    <FaArrowRight />
+  </button>
+</div>
+    </div>
+  );
 };
 
-export default Home
+export default Home;
